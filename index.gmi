@@ -1,0 +1,25 @@
+```                                                                                                             
+   ______               ____            __                                                                      
+  / ____/__  ____ ___  / __ \___  _____/ /_                                                                     
+ / / __/ _ \/ __ `__ \/ /_/ / _ \/ ___/ __/                                                                     
+/ /_/ /  __/ / / / / / _, _/  __(__  ) /_                                                                       
+\____/\___/_/ /_/ /_/_/ |_|\___/____/\__/                                                                       
+```                                                                                                             
+                                                                                                                
+# GEM.REST                                                                                                      
+                                                                                                                
+Simple solutions designed for the Gemini protocol. So you can rest easy by letting us handle the hassle.        
+                                                                                                                
+## QUICK LINKS                                                                                                  
+                                                                                                                
+=> https://github.com/gemrest GitHub                                                                            
+                                                                                                                
+## PROJECTS                                                                                                     
+                                                                                                                
+=> https://github.com/gemrest/capybara Capybara                                                                 
+=> https://github.com/gemrest/lara Lara (WIP)                                                                   
+=> https://github.com/gemrest/agate-compose Agate Compose                                                       
+                                                                                                                
+## FOOTER                                                                                                       
+                                                                                                                
+Copyright (C) 2021-2021 GemRest
