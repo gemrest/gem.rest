@@ -1,0 +1,158 @@
+```
+   ______               ____            __ 
+  / ____/__  ____ ___  / __ \___  _____/ /_
+ / / __/ _ \/ __ `__ \/ /_/ / _ \/ ___/ __/
+/ /_/ /  __/ / / / / / _, _/  __(__  ) /_  
+\____/\___/_/ /_/ /_/_/ |_|\___/____/\__/  
+```
+
+# HOW TO HOST MULTIPLE GEMINI CAPSULES ON ONE VPS
+
+## QUICK LINKS
+
+=> https://github.com/gemrest GitHub
+=> /guides Guides
+
+## PROBLEM
+
+I want host multiple Gemini capsules on one VPS but it's not working because the port (1965) is already occupied!
+
+## SOLUTION
+
+DISCLAIMER: The following guide will be aimed towards Debian based operating systems! If you would like to see other operating systems supported, please make a contribution over at the GemRest Gemini capsule repository on GitHub.
+
+=> https://github.com/gemrest/gem.rest gemrest/gem.rest
+
+DISCLAIMER: The following guide takes a lot of inspiration for Luke Smith's LandChat.net, many thanks to him!
+
+=> https://lukesmith.xyz/ Luke Smith
+=> https://landchad.net/ LandChat.net
+
+### 0. LOGGING (SSH-ING) INTO THE VPS
+
+The first thing we need to get started is to be SSH'd into our VPS, this will allow us to take control of the VPS's command-line remotely.
+
+We can SSH our VPS by executing the following command on our command-line:
+
+```
+$ ssh user@127.0.0.1
+```
+
+NOTE: Make sure to replace "user" with the user on your VPS that you would like to log into, if you don't know which one to choose, just replace it with "root".
+
+NOTE: Make sure to replace "127.0.0.1" with your VPS's IP address, this can be found by navigating to your VPS provider's web panel and locating a section labeled "IP Address" or something simular in nature.
+
+You should now be prompted to enter the password for your user on your VPS, if you set your own password; you should know it, if not; this can be found by navigating to your VPS provider's web panel and locating a section labeled "Password" or something simular in nature.
+
+NOTE: This section (0) does not cover logging into our VPS with an SSH key, if you are required to login with an SSH key; there should be a help section or guide on your VPS provider's web panel detailing how to login with an SSH key.
+
+### 1. INSTALLING A WEB-SERVER (NGINX) FOR REVERSE-PROXYING
+
+We now need to update our VPS and install the web-server (NGINX).
+
+```
+$ sudo apt update        # Check for any updates
+$ sudo apt upgrade       # Install any updates
+$ sudo apt install nginx # Install the web-server
+```
+
+### 2. CONFIGURING THE GEMINI SERVER
+
+We now need to configure our Gemini server to work with our web-server (NGINX).
+
+1. Locate your first Gemini server's configuration file/ web panel/ et certera
+2. Change your first Gemini server's port from "1965" to anything else, I recommend 1966
+3. Locate your second Gemini server's configuration file/ web panel/ et certera
+4. Change your second Gemini server's port from "1965" to anything else, I recommend 1967
+
+### 3. CONFIGURING THE WEB-SERVER (NGINX)
+
+We now need to inform the web-server (NGINX) of which port our Gemini server is occupying (localhost) and allow the web-server (NGINX) to redirect all incoming traffic to the right place based on the domain name that our VPS was accessed from.
+
+First, let's navigate into NGINX's configuration directory:
+
+```
+$ cd /etc/nginx
+```
+
+### 3.1. CREATING A DOMAIN MAP
+
+We now need to create a domain map which NGINX will use to decide what content to serve our end-user.
+
+1. Open the "nginx.conf" file within the current directory:
+
+```
+$ sudo vim nginx.conf # Replace "vim" with your favourite text editor
+```
+
+2. Add the following to the "nginx.conf" file:
+
+```
+stream {
+  map $ssl_preread_server_name $name {
+    # Replace "fuwn.me" with your Gemini capsule's domain name
+    # Replace "fuwnme" with your Gemini capsule's domain name without the period
+    fuwn.me fuwnme_backend;
+
+    # Replace "gem.rest" with your Gemini capsule's domain name
+    # Replace "gemrest" with your Gemini capsule's domain name without the period
+    gem.rest gemrest_backend;
+  }
+
+  # Server logic from next section ...
+}
+```
+
+### 3.2. IMPLEMENTING THE SERVER LOGIC
+
+We now need to implement the the server logic that our web-server (NGINX) runs once that domain map forwards the request to the correct domain handler.
+
+1. Add the following to your "nginx.conf" file after the domain map:
+
+```
+stream {
+  # Domain map from previous section ...
+
+  # Replace "fuwnme" with your Gemini capsule's domain name without the period
+  upstream fuwnme_backend {
+    server localhost:1966; # If you chose a different port, replace "1966" with that port
+  }
+
+  # Replace "gemrest" with your Gemini capsule's domain name without the period
+  upstream gemrest_backend {
+    server localhost:1967; # If you chose a different port, replace "1967" with that port
+  }
+
+  server {
+    listen 1965;
+
+    ssl_preread on;
+    proxy_pass $name;
+  }
+}
+```
+
+### 3.3. FINISHING UP
+
+1. Save and exit the file (vim: ":wq")
+2. On the command-line; execute:
+
+```
+$ sudo systemctl restart nginx
+```
+
+### 4. WRAPPING UP
+
+That's that! You now should have a working web-server (NGINX) up and running which forwards the correct Gemini capsule to the end-user based on what domain name they access the VPS with!
+
+### 3.4. APPENDIX: PROXYING MORE GEMINI CAPSULES
+
+If you ever need to run any more Gemini capsules on your VPS, follow these guidelines:
+
+1. Change the port number of the new Gemini capsule to the incremented value of the last configured Gemini capsule: If your last configured Gemini capsule uses port "1967", use the port "1968" for the new Gemini capsule.
+2. Add an extra entry to the domain map: Reference section 3.1
+3. Add an extra bit of server logic: NOT the "server { ..." bit, just the "..._backend" bit; reference section 3.2
+
+## FOOTER
+
+Copyright (C) 2021-2021 GemRest
