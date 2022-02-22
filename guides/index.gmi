@@ -1,22 +1,22 @@
-```                                                                                                                             
-   ______               ____            __                                                                                      
-  / ____/__  ____ ___  / __ \___  _____/ /_                                                                                     
- / / __/ _ \/ __ `__ \/ /_/ / _ \/ ___/ __/                                                                                     
-/ /_/ /  __/ / / / / / _, _/  __(__  ) /_                                                                                       
-\____/\___/_/ /_/ /_/_/ |_|\___/____/\__/                                                                                       
-```                                                                                                                             
-                                                                                                                                
-# GUIDES                                                                                                                        
-                                                                                                                                
-## QUICK LINKS                                                                                                                  
-                                                                                                                                
-=> https://github.com/gemrest GitHub                                                                                            
-=> /guides Guides                                                                                                               
-                                                                                                                                
-## ENTRIES                                                                                                                      
-                                                                                                                                
-=> /guides/how_to_host_multiple_gemini_capsules_on_one_vps.gmi How To Host Multiple Gemini Capsules on One VPS                  
-                                                                                                                                
-## FOOTER                                                                                                                       
-                                                                                                                                
+```
+   ______               ____            __
+  / ____/__  ____ ___  / __ \___  _____/ /_
+ / / __/ _ \/ __ `__ \/ /_/ / _ \/ ___/ __/
+/ /_/ /  __/ / / / / / _, _/  __(__  ) /_
+\____/\___/_/ /_/ /_/_/ |_|\___/____/\__/
+```
+
+# GUIDES
+
+## QUICK LINKS
+
+=> https://github.com/gemrest GitHub
+=> /guides Guides
+
+## ENTRIES
+
+=> /guides/how_to_host_multiple_gemini_capsules_on_one_vps.gmi How To Host Multiple Gemini Capsules on One VPS
+
+## FOOTER
+
 Copyright (C) 2021-2021 GemRest
