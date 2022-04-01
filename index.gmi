@@ -17,6 +17,9 @@ Simple solutions designed for the Gemini protocol. So you can rest easy by letti
 
 ## PROJECTS
 
+=> https://github.com/gemrest/september September
+=> https://github.com/gemrest/windmark Windmark
+=> https://github.com/gemrest/windmark-comments Windmark Comments
 => https://github.com/gemrest/capybara Capybara
 => https://github.com/gemrest/lara Lara (WIP)
 => https://github.com/gemrest/agate-compose Agate Compose
