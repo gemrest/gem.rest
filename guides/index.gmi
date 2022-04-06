@@ -11,7 +11,7 @@
 ## QUICK LINKS
 
 => https://github.com/gemrest GitHub
-=> /guides Guides
+=> /guides/index.gmi Guides
 
 ## ENTRIES
 
