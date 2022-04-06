@@ -13,7 +13,7 @@ Simple solutions designed for the Gemini protocol. So you can rest easy by letti
 ## QUICK LINKS
 
 => https://github.com/gemrest GitHub
-=> /guides Guides
+=> /guides/index.gmi Guides
 
 ## PROJECTS
 
