@@ -48,6 +48,13 @@ Report bugs to https://github.com/gemrest/sydney/issues
 
 ```
 
+### Commands
+
+* open, o <capsule_uri>: Open the given capsule URI
+* quit, q: Close the client
+* wrap <width>: Wrap the text to the given width, "0" for current terminal width
+* help: Open this page
+
 ## License
 
 This project is licensed with the GNU General Public License v3.0.
