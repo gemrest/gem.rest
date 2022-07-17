@@ -26,6 +26,9 @@ Simple solutions designed for the Gemini protocol. So you can rest easy by letti
 => https://github.com/gemrest/agate-compose Agate Compose
 => https://github.com/gemrest/viv viv
 => /projects/sydney.gmi Sydney
+=> https://github.com/gemrest/germ Germ
+=> https://github.com/gemrest/laurali Laurali
+=> https://github.com/gemrest/maple Maple
 
 ## Footer
 
