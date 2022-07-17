@@ -6,18 +6,18 @@
 \____/\___/_/ /_/ /_/_/ |_|\___/____/\__/
 ```
 
-# GUIDES
+# Projects
 
-## QUICK LINKS
+## Quick Links
 
 => https://github.com/gemrest GitHub
 => /guides/index.gmi Guides
 => /projects/index.gmi Projects
 
-## ENTRIES
+## Entries
 
-=> /guides/how_to_host_multiple_gemini_capsules_on_one_vps.gmi How To Host Multiple Gemini Capsules on One VPS
+=> /projects/sydney.gmi Vim-like, Command-line Gemini Client
 
-## FOOTER
+## Footer
 
-Copyright (C) 2021-2021 GemRest
+Copyright (C) 2022-2022 GemRest

@@ -14,6 +14,7 @@ Simple solutions designed for the Gemini protocol. So you can rest easy by letti
 
 => https://github.com/gemrest GitHub
 => /guides/index.gmi Guides
+=> /projects/index.gmi Projects
 
 ## PROJECTS
 
@@ -24,6 +25,7 @@ Simple solutions designed for the Gemini protocol. So you can rest easy by letti
 => https://github.com/gemrest/lara Lara (WIP)
 => https://github.com/gemrest/agate-compose Agate Compose
 => https://github.com/gemrest/viv viv
+=> /projects/sydney.gmi Sydney
 
 ## FOOTER
 
