@@ -155,4 +155,4 @@ If you ever need to run any more Gemini capsules on your VPS, follow these guide
 
 ## FOOTER
 
-Copyright (C) 2021-2021 GemRest
+Copyright (C) 2022-2022 GemRest

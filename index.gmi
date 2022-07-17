@@ -29,4 +29,4 @@ Simple solutions designed for the Gemini protocol. So you can rest easy by letti
 
 ## FOOTER
 
-Copyright (C) 2021-2021 GemRest
+Copyright (C) 2022-2022 GemRest
