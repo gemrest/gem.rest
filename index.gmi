@@ -6,17 +6,17 @@
 \____/\___/_/ /_/ /_/_/ |_|\___/____/\__/
 ```
 
-# GEM.REST
+# GemRest
 
 Simple solutions designed for the Gemini protocol. So you can rest easy by letting us handle the hassle.
 
-## QUICK LINKS
+## Quick Links
 
 => https://github.com/gemrest GitHub
 => /guides/index.gmi Guides
 => /projects/index.gmi Projects
 
-## PROJECTS
+## Projects
 
 => https://github.com/gemrest/september September
 => https://github.com/gemrest/windmark Windmark
@@ -27,6 +27,6 @@ Simple solutions designed for the Gemini protocol. So you can rest easy by letti
 => https://github.com/gemrest/viv viv
 => /projects/sydney.gmi Sydney
 
-## FOOTER
+## Footer
 
 Copyright (C) 2022-2022 GemRest
